@@ -14,19 +14,23 @@ body {
 
 /* Header styles */
 header {
-    background-color: #2c3e50;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #2A2D3D;
     color: white;
-    padding: 1rem 0;
-    position: fixed;
-    width: 100%;
+    padding: 0.9rem 5%;
+    position: sticky;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    z-index: 1;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    gap: 1rem;
 }
 
 nav ul li {
@@ -37,15 +41,18 @@ nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.9rem;
+
 }
 
 nav ul li a:hover {
-    color: #3498db;
+   text-decoration: underline;
+   /*border: 2px ;*/
 }
 
 /* Main content */
 main {
-    margin-top: 80px;
+    margin-top: 0px;
     padding: 20px;
     max-width: 1200px;
     margin-left: auto;
@@ -55,7 +62,7 @@ main {
 /* Section styles */
 section {
     background: white;
-    margin: 20px 0;
+    margin: 0px;
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -72,11 +79,11 @@ section {
     border-radius: 50%;
     object-fit: cover;
     margin: 20px 0;
-    border: 3px solid #2c3e50;
+    border: 3px solid #2A2D3D;
 }
 
 #Bio h1 {
-    color: #2c3e50;
+    color: #2A2D3D;
     margin-bottom: 15px;
 }
 
@@ -90,7 +97,7 @@ table {
 caption {
     font-size: 1.2em;
     margin-bottom: 10px;
-    color: #2c3e50;
+    color: #2A2D3D;
 }
 
 th, td {
@@ -100,7 +107,7 @@ th, td {
 }
 
 th {
-    background-color: #2c3e50;
+    background-color: #2A2D3D;
     color: white;
 }
 
@@ -114,32 +121,53 @@ tr:nth-child(even) {
 }
 
 #Interests and Hobbies h3 {
-    color: #2c3e50;
+    color: #2A2D3D;
     margin-bottom: 10px;
 }
 
 /* Form styles */
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
+
+
+#Contact_form {
+    /*display: flex;
+    justify-content: center;*/
 }
 
-label {
+
+#Contact_form h3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+form {
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+form label {
     margin: 10px 0 5px 0;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+input{
+    display: flex;
+    justify-content: center;
 }
 
 input, textarea {
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
+    width: 400px;
+    padding: 10px ;
+    margin: 15px;
+    border: 2px solid #ddd;
     border-radius: 4px;
     font-size: 16px;
+
 }
 
 input[type="submit"] {
-    background-color: #2c3e50;
+    background-color: #2A2D3D;
     color: white;
     border: none;
     padding: 12px;
@@ -153,7 +181,7 @@ input[type="submit"]:hover {
 
 /* Footer styles */
 footer {
-    background-color: #2c3e50;
+    background-color: #2A2D3D;
     color: white;
     text-align: center;
     padding: 20px;
@@ -195,4 +223,40 @@ footer a:hover {
         width: 150px;
         height: 150px;
     }
+}
+
+/* Active nav link highlight */
+nav ul li a.active {
+  text-decoration: underline;
+  color: #3498db;
+}
+
+/* Mobile menu toggle styles example */
+nav ul.open {
+  display: flex;
+  flex-direction: column;
+  background-color: #2A2D3D;
+  position: absolute;
+  top: 60px; /* below header */
+  right: 5%;
+  border-radius: 8px;
+  padding: 10px;
+  width: 200px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    display: none;
+  }
+  nav ul.open {
+    display: flex;
+  }
+  #menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+  }
 }
