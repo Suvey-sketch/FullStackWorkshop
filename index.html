@@ -4,93 +4,164 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
     <link rel="stylesheet" href="Week1/style.css">
-<body>
-    <header> 
-        <nav> 
-            <ul>
-                <li><a href="#Bio"> Short bio</a> </li>
-                <li><a href="#Education History"> Education History</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Contact_form"> Contact Form</a></li>
+</head>
+<body>''.
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Hero Section with Video Background -->
+    <header id="hero">
+        <video autoplay loop muted playsinline id="video-background">
+            <source src="background.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <nav class="navbar">
+            <span class="logo">Suvekshya Adhikari</span>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
+        
+        <div class="hero-content">
+            <h1>Suvekshya Adhikari</h1>
+            <p>Frontend Developer & UI/UX Enthusiast</p>
+        </div>
     </header>
+
     <main>
-        <section id="Bio">
-            <h1> About Me</h1>
-            <img src="pic/suv.jpg" alt="My Photo">
+        <!-- About Section -->
+        <section id="about">
+            <h1>About Me</h1>
+            <img src="pic/suv.jpg" alt="Suvekshya Adhikari Photo">
             <p>Result driven person with the curiosity to learn new things. My name is Suvekshya Adhikari.
-                I am a Level 4 student studying in herald college,Kathmandu. </p>
-        </section>
-        <section id="Education History">
+                I am a Level 4 student studying in Herald College, Kathmandu.</p>
+            
+            <h2 style="margin-top: 2rem; color: #2A2D3D;">Education History</h2>
             <table border="1">
-                <caption> <b><u>Eduaction History</u></b></caption>
+                <caption><b><u>Education History</u></b></caption>
                 <tr>
-                    <th> Degree/Qualifications </th>
-                    <th> Institute</th>
-                    <th> Board</th>
-                    <th> Marks</th>
+                    <th>Degree/Qualifications</th>
+                    <th>Institute</th>
+                    <th>Board</th>
+                    <th>Marks</th>
                 </tr>
                 <tr>
-                    <td> Secondary Education </td>
-                    <td> Everest Secondary School</td>
-                    <td> SEE</td>
-                    <td> A+</td>
+                    <td>Secondary Education</td>
+                    <td>Everest Secondary School</td>
+                    <td>SEE</td>
+                    <td>A+</td>
                 </tr>
                 <tr>
-                    <td> Higher Education</td>
-                    <td> Everest College</td>
-                    <td> NEB</td>
-                    <td> A</td>
+                    <td>Higher Education</td>
+                    <td>Everest College</td>
+                    <td>NEB</td>
+                    <td>A</td>
                 </tr>
             </table>
-
-        </section>
-        <section id="Projects">
-            <h1> My Projects</h1>
-            <div>
-                <h3> Weather App</h3>
-            <p> Reading different genres of book always gave me happiness.
-                I mainly love to read classic literature books, others genres include romance, poetry, fantasy and many more.
-            </p>
-            </div>
-            <div>
-                <h3> Apartment building </h3>
-                <p>I made an apartment building using Unity. </p>
-            </div>
-            <div>
-                <h3>My protfolio</h3>
-                <p>  </p>
-            </div>
-           
-            
         </section>
 
-        <section id="Contact_form">
-            <h3> Connect with me</h3> 
-            <form action="">
-                <label for="name"> Enter Name: </label>
-                <input type="text" id="name" placeholder="Name" required>
+        <!-- Skills Section (Using Flexbox) -->
+        <section id="skills">
+            <h1>My Skills & Interests</h1>
+            <div class="skills-flex">
+                <div class="skill-item">
+                    <div class="skill-icon">📚</div>
+                    <h3>Reading Books</h3>
+                    <p>Reading different genres of books always gave me happiness. I mainly love to read classic literature books, other genres include romance, poetry, fantasy and many more.</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🌌</div>
+                    <h3>Astronomy</h3>
+                    <p>I always wanted to know more about the stars and the galaxies.</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Learning Crafts</h3>
+                    <p>I have been interested in many crafts since my childhood. I have learned drawing/sketching, making candles, ceramics, and knitting.</p>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-icon">💃</div>
+                    <h3>Dancing</h3>
+                    <p>I've always been dancing since my childhood days. Dance has always been a form for me to express myself.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Using CSS Grid) -->
+        <section id="projects">
+            <h1>My Projects</h1>
+            <div id="projects-grid">
+                <div class="project-card">
+                    <h3>Weather App</h3>
+                    <p>A dynamic weather application that provides real-time weather information using API integration. Features include location-based forecasts and responsive design.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">API</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Apartment Building</h3>
+                    <p>I made an apartment building using Unity. This 3D project showcases architectural design and spatial planning with interactive elements.</p>
+                    <div class="project-tags">
+                        <span class="tag">Unity</span>
+                        <span class="tag">3D Modeling</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>My Portfolio</h3>
+                    <p>A responsive personal portfolio website built with HTML5, CSS3, and JavaScript. Features video background, mobile navigation, and form validation.</p>
+                    <div class="project-tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Book Collection Manager</h3>
+                    <p>A web application to track and organize my personal book collection with search functionality and reading progress tracking.</p>
+                    <div class="project-tags">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">CSS</span>
+                        <span class="tag">LocalStorage</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h3>Connect with Me</h3> 
+            <form id="contact-form">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name" placeholder="Your Name" required>
         
-                <label for="email"> Enter Email:</label>
-                <input type="email" id="email" placeholder="Email">
-
-                <label for="message"> Enter message</label>
-                <textarea name="message" id="message"></textarea>
-
-                <input type="submit">
-
-              </form> 
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" placeholder="your.email@example.com" required>
+                
+                <label for="message">Enter Message:</label>
+                <textarea name="message" id="message" rows="5" placeholder="Your message here..." required></textarea>
+                
+                <input type="submit" value="Send Message">
+                <div id="form-message"></div>
+            </form> 
         </section>
-
-    
     </main>
+
     <footer>
-        <p> Copyright © 2023 Suvekshya Adhikari</p>
-        <a href="https://www.wikipedia.org/" target="_blank"> Socials</a>
+        <p>Copyright © 2024 Suvekshya Adhikari</p>
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> | 
+        <a href="https://github.com" target="_blank">GitHub</a>
     </footer>
-    <script src="script.js"></script>
+
+    <script src="Week1/script.js"></script>
 </body>
 </html>
