@@ -1,0 +1,72 @@
+/* Reset some basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Page background */
+body {
+    background: #f5f5f5;
+    padding: 40px;
+}
+
+/* Center the form section */
+#Fill {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+#Fill h1 {
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Input styling */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #0056b3;
+}
+
+/* Message area */
+#form-message {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+    text-align: center;
+}

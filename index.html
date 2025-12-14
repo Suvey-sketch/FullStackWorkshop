@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Form</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	  <section id="Fill">
+	  	<h1>User Registration</h1>
+            <form action="registration.php" method="POST" id="registration">
+                <label for="name">Enter Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+        
+                <label for="email">Enter Email:</label>
+                <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" name="password" placeholder="Password required" required>
+                
+                <label for="confrim">Confirm Password:</label>
+                <input type="password" id="confrim" name="confirm" placeholder="Confirm password" required>
+
+                <input type="submit" value="Send Message">
+                <div id="form-message"></div>
+            </form> 
+        </section>
+</body>
+</html>
