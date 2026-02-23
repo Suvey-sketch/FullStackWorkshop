@@ -1,0 +1,261 @@
+/* Color Palette: 
+   Primary: #30364f (Deep Navy)
+   Secondary: #acbac4 (Slate Blue-Grey)
+   Accent: #E1d9bc (Champagne/Beige)
+   Danger: #c40c0c (Deep Red)
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Layout Containers */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+header {
+    background-color: #30364f;
+    color: #E1d9bc;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Typography */
+h2 {
+    color: #30364f;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    color: white;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+hr {
+    border: 0;
+    height: 2px;
+    background: #acbac4;
+    margin: 20px 0;
+}
+
+/* Navigation & Buttons */
+.nav-actions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.btn-primary { 
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+    background: #30364f; 
+    color: #E1d9bc; 
+}
+.btn-primary:hover { background: #404869; }
+
+.btn-secondary { 
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+    background: #acbac4; 
+    color: #30364f; }
+.btn-secondary:hover { background: #96a7b5; }
+
+.btn-danger { 
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+    background: #c40c0c; 
+    color: white; }
+.btn-danger:hover { background: #a00a0a; }
+
+.btn-blue { 
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: background 0.3s ease;
+    background: blue; 
+    color: white; }
+.btn-blue:hover { background: #a00a0a; }
+
+/* Form Design */
+.form-section {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fdfdfd;
+    border: 1px solid #acbac4;
+    border-radius: 8px;
+}
+
+.form-group { margin-bottom: 15px; }
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #30364f;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #acbac4;
+    border-radius: 4px;
+    background: #fff;
+}
+
+input:focus {
+    border-color: #30364f;
+    outline: none;
+}
+
+/* Table Design */
+.table-container { overflow-x: auto; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #E1d9bc; /* Table Accent Color */
+}
+
+th {
+    background-color: #30364f;
+    color: #E1d9bc;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #acbac4;
+    color: #30364f;
+}
+
+tr:hover { background-color: rgba(172, 186, 196, 0.2); }
+
+/* Login Specific */
+.login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-card {
+    width: 350px;
+    padding: 40px;
+    background: white;
+    border-top: 5px solid blue; /* Danger color border */
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #acbac4;
+    font-size: 0.9rem;
+}
+/* TABLE RESPONSIVENESS (The "Card" Trick) */
+@media screen and (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-group {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    /* Hide table headers on mobile */
+    table thead, table tr th {
+        display: none;
+    }
+
+    table, table tbody, table tr, table td {
+        display: block;
+        width: 100%;
+    }
+
+    table tr {
+        margin-bottom: 15px;
+        border: 1px solid var(--secondary);
+        border-radius: 8px;
+        background: var(--accent);
+    }
+
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    /* Add labels before the data */
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+        color: var(--primary);
+    }
+    
+    table td:last-child {
+        text-align: center;
+        padding-left: 15px;
+    }
+}
